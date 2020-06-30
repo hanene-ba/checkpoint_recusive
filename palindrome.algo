@@ -1,0 +1,16 @@
+FUNCTION  palindrome ( ch: STRING) : BOOLEAN
+   
+BEGIN
+     IF (ch.length = 0) OR (ch. length = 1) THEN
+         RETURN True; 
+    ELSE
+        IF (ch[0] = ch[ch.length -1 ] ) THEN
+            RETURN palindrome (substr(1, ch.length -1 ));
+        ELSE 
+            RETURN False; 
+        END_IF
+    END_IF
+END
+
+ /*substr est une fonction qui retourne la partie d'une chaîne de 
+ caractères comprise entre l'indice de départ et un nombre de caractère */ 
